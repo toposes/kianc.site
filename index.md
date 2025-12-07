@@ -1,8 +1,9 @@
 ## About
 
 I am an n<sup>th</sup> year graduate student studying mathematics (for some big n.)\
-I like the interplay between category theory and logic. My favorite adjunction is ∅ ⊣ ∗.\
-I am also quite fond of rhythm games, especially DanceDanceRevolution.
+I like the interplay between category theory and logic. \
+My favorite adjunction is ∅ ⊣ ∗.\
+I am also quite fond of DanceDanceRevolution.
 
 <hr>
 
