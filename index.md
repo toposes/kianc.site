@@ -1,6 +1,6 @@
 ---
 permalink: /
-title: "Kian's webpage"
+title: "Kian Cho"
 ---
 
 ## About
