@@ -1,3 +1,7 @@
+<head>
+  <title>Kian's webpage</title>
+</head>
+
 ## About
 
 I am an n<sup>th</sup> year graduate student studying mathematics (for some big n.)\
