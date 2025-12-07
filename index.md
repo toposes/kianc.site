@@ -3,12 +3,10 @@ permalink: /
 title: "A wild goose appeared!"
 ---
 
-
-
 ## About
 
 <div style="text-align: center;">
-  <img src="goose.jpg">
+  <img src="goose.png" width="300">
 </div>
 
 I am a graduate student studying math. I like the interplay between category theory and logic. My favorite adjunction is ∅ ⊣ ✳. Outside of math, I am quite fond of rhythm games such as DanceDanceRevolution.
