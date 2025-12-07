@@ -5,10 +5,6 @@ title: "A wild goose appeared!"
 
 ## About
 
-<div style="text-align: center;">
-  <img src="goose.png" alt="what I actually look like" width="200">
-</div>
-
 I am a graduate student studying math. I like the interplay between category theory and logic. My favorite adjunction is ∅ ⊣ ✳. Outside of math, I am quite fond of rhythm games such as DanceDanceRevolution.
 
 <hr>
@@ -41,6 +37,8 @@ In spring 2026, I will co-teach a course in categorical logic (joint effort with
 
 ### Contact
 
+<img align="right" src="goose.png" alt="what I actually look like" width="200">
+
 Kian Cho\
 Department of Mathematical Sciences\
 Carnegie Mellon University\
@@ -50,3 +48,5 @@ kianc (at) andrew.cmu.edu\
 kianc.math (at) gmail 
 
 You can find me in Wean 6209.
+
+
