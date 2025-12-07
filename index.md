@@ -46,6 +46,7 @@ Pittsburgh, PA 15213
 
 kianc (at) andrew.cmu.edu\
 kianc.math (at) gmail 
+@toposes on discord
 
 You can find me in Wean 6209.
 
