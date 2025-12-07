@@ -5,7 +5,7 @@ title: "A wild goose appeared!"
 
 ## About
 
-I am an n<sup>th</sup> year graduate student studying mathematics (for some big n.) I like the interplay between category theory and logic. My favorite adjunction is ∅ ⊣ ✳. Outside of math, I am quite fond of rhythm games such as DanceDanceRevolution and Pop'n Music.
+I am an n<sup>th</sup> year graduate student studying mathematics. I like the interplay between category theory and logic. My favorite adjunction is ∅ ⊣ ✳. Outside of math, I am quite fond of rhythm games such as DanceDanceRevolution and Pop'n Music.
 
 <hr>
 
