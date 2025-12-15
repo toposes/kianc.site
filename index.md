@@ -2,6 +2,8 @@
 permalink: /
 title: "A wild goose appeared!"
 ---
+{% include head-custom.html %}
+
 
 ## About
 
