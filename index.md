@@ -3,6 +3,14 @@ permalink: /
 title: "A wild goose appeared!"
 ---
 
+<head>
+<link rel="icon" type="image/png" href="favicon-96x96.png" sizes="96x96" />
+<link rel="icon" type="image/svg+xml" href="favicon.svg" />
+<link rel="shortcut icon" href="favicon.ico" />
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+<link rel="manifest" href="/site.webmanifest" />
+</head>
+
 ## About
 
 I am a graduate student studying math. I like the interplay between category theory and logic. My favorite adjunction is ∅ ⊣ ✳. Outside of math, I am quite fond of rhythm games such as DanceDanceRevolution.
