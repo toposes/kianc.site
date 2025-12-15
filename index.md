@@ -39,8 +39,6 @@ In spring 2026, I will co-teach a course in categorical logic (joint effort with
 
 ### Contact
 
-<img align="right" src="goose.png" alt="what I actually look like" width="200">
-
 Kian Cho\
 Department of Mathematical Sciences\
 Carnegie Mellon University\
