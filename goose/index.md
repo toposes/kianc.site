@@ -4,7 +4,7 @@ permalink: /goose/
 title: A wild goose appeared!
 ---
 
-<img src="/assets/goose.png" width="400">
+<img src="/assets/goose.png" width="250">
 
 
-Me in my truest form
+My truest form
