@@ -4,4 +4,4 @@ permalink: /ddr/
 title: Show me your moves!
 ---
 
-<img src="/assets/stepzone.png" width="450">
+<img align="center" src="/assets/stepzone.png" width="450">
