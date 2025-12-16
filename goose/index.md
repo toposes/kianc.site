@@ -1,7 +1,7 @@
 ---
 layout: default
 permalink: /goose/
-title: A wild goose appeared!
+title: a wild goose appeared
 ---
 
 <img align="right" src="/assets/goose.png" width="250">
