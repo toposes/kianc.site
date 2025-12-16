@@ -12,8 +12,9 @@
 body {
   background-color: #fcf4a3;
   padding:50px;
+    font: 14px/1.5 Ubuntu;
   color:#595959;
-  font-weight:400;
+  font-weight:450;
 }
 
 h1, h2, h3, h4, h5, h6 {
