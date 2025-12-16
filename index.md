@@ -29,7 +29,7 @@ At Carnegie Mellon University, I have served as a teaching assistant for many it
 - differential and integral calculus
 - multivariable calculus
 - matrix algebra
-- concepts of mathemtaics
+- concepts of mathematics
 
 In spring 2026, I will co-teach a course in categorical logic (joint effort with Owen Milner and Corinthia Aberle.)
 
