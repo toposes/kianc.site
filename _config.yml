@@ -5,7 +5,7 @@ baseurl: ""
 
 # Site Author
 author:
-  location         : "Pittsburgh, PA"
+  location         : Pittsburgh, PA
   email            : "kianc [at] andrew.cmu.edu"
   github           : "toposes"
   linkedin         : "toposes"
