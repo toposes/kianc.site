@@ -59,6 +59,22 @@ a:hover small {
   margin:0 auto;
 }
 
+.contact-info {
+  display: grid;
+  grid-template-columns: 1.5em auto;
+  row-gap: 0.4em;
+  font-weight: 300;
+  line-height: 1.8;
+}
+
+.contact-info span {
+  display: contents;
+}
+
+.contact-info i {
+  justify-self: center;
+}
+
 blockquote {
   border-left:1px solid #e5e5e5;
   margin:0;
