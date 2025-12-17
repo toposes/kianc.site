@@ -64,7 +64,7 @@ a:hover small {
 }
 
 .contact-info .item {
-  display: contents;
+  display: block;
   align-items: center;
 }
 
