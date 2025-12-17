@@ -30,8 +30,16 @@
         <h1 style="text-align: center"><a href="{{ "/" }}">{{ site.title }}</a></h1>
         <img src="{{site.logo | relative_url}}" alt="Logo" />
         <p>{{ site.description }}</p>
-        {% include author-profile.html %}
+        <div itemscope itemtype="http://schema.org/Person">
+          <div class="author__urls-wrapper">
+          <ul class="author__urls social-icons">
+            <li>{{ author.location }}</li>
+            <li><a href="https://www.linkedin.com/in/{{ author.linkedin }}">LinkedIn</a></li>
+            <li><a href="https://github.com/{{ author.github }}">Github</a></li>
+          </ul>
+        </div>
 
+</div>
         <hr>
         
         <p style="font-weight: 400; padding-left: 10px; line-height: 1.8">
