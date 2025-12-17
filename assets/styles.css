@@ -60,19 +60,19 @@ a:hover small {
 }
 
 .contact-info {
-  display: grid;
-  grid-template-columns: 1.5em auto;
-  row-gap: 0.4em;
   font-weight: 300;
   line-height: 1.8;
 }
 
-.contact-info span {
-  display: contents;
+.contact-info .item {
+  display: flex;
+  align-items: center;
 }
 
 .contact-info i {
-  justify-self: center;
+  width: 1.5em;   /* magic line */
+  text-align: center;
+  margin-right: 0.5em;
 }
 
 blockquote {
