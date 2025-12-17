@@ -3,10 +3,3 @@ description: Hello, I am Kian (he/him). I am a category theory enjoyer, a rhythm
 logo: assets/portrait.png
 baseurl: ""
 
-# Site Author
-author:
-  location         : Pittsburgh, PA
-  email            : "kianc [at] andrew.cmu.edu"
-  github           : "toposes"
-  linkedin         : "toposes"
-
