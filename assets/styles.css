@@ -60,18 +60,18 @@ a:hover small {
 }
 
 .contact-info {
+  display: block;
   font-weight: 300;
 }
 
 .contact-info .item {
-  display: block;
   align-items: center;
 }
 
 .contact-info i {
   width: 1.5em;   /* magic line */
   text-align: center;
-  margin-right: 0.5em;
+  margin-right: 0.2em;
 }
 
 blockquote {
