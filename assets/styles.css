@@ -60,7 +60,7 @@ a:hover small {
 }
 
 .contact-info {
-  display: block;
+  line-height: 1.8;
   font-weight: 300;
 }
 
