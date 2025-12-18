@@ -75,6 +75,12 @@ a:hover small {
   margin-right: 0.2em;
 }
 
+.cols {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
 blockquote {
   border-left:1px solid #e5e5e5;
   margin:0;
