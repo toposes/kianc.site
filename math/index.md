@@ -1,7 +1,7 @@
 ---
 layout: default
 permalink: /math/
-title: mathematics for the lazy categoricians
+title: math | {{ site.title }}
 ---
 
 this page is intentionally left blank
