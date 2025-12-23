@@ -1,7 +1,7 @@
 ---
 layout: default
 permalink: /talks/
-title: talks | {{ site.title }}
+title: talks | Kian's (essentially small) site
 ---
 
 this page is intentionally left blank
