@@ -1,66 +1,50 @@
 <!DOCTYPE html>
-<html>
-  
+<html lang="en">
+
   <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <link rel="icon" type="image/svg+xml" href="{{ site.baseurl }}/assets/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/svg+xml" href="{{ '/assets/favicon.svg' | relative_url }}" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
-    <link rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
     <meta property="og:url" content="http://kianc.site">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Kian's (essentially small) site">
-    <meta property="og:description" content="Hello, I am Kian (he/him). I am a category theory enjoyer, a stack of cats in trench coat, or a horrible goose.">
-    <meta property="og:image" content="http://kianc.site/assets/goose.png">
-    <meta property="og:image:height" content="200">
+    <meta property="og:title" content="{{ site.title }}">
+    <meta property="og:description" content="{{ site.description }}">
+    <meta property="og:image" content="http://kianc.site/assets/portrait.png">
 
-    
-    <meta name="viewport" content="width=device-width">
-    <link rel="stylesheet" href="{{ site.baseurl }}/assets/styles.css">
+    <link rel="stylesheet" href="{{ '/assets/styles.css' | relative_url }}">
     <title>{{ page.title }}</title>
   </head>
-  
+
   <body>
-    <div class="wrapper">
-      
+    <aside class="sidebar">
       <header>
-        <h1 style="text-align: center"><a href="{{ "/" }}">{{ site.title }}</a></h1>
-        <img src="{{site.logo | relative_url}}" alt="Logo" />
+        <h1><a href="{{ '/' | relative_url }}">{{ site.title }}</a></h1>
+        <img class="portrait" src="{{ '/assets/portrait.png' | relative_url }}" alt="Portrait of Kian" />
         <p>{{ site.description }}</p>
         <p class="contact-info">
           <span><i class="fa-solid fa-location-dot"></i> Pittsburgh, PA</span><br>
-          <span>
-            <i class="fa-brands fa-github"></i>
-            <a href="https://github.com/toposes">Github</a>
-          </span><br>
-          <span>
-            <i class="fa-brands fa-linkedin"></i>
-            <a href="https://www.linkedin.com/in/toposes">LinkedIn</a>
-          </span>
+          <span><i class="fa-brands fa-github"></i> <a href="https://github.com/toposes">Github</a></span><br>
+          <span><i class="fa-brands fa-linkedin"></i> <a href="https://www.linkedin.com/in/toposes">LinkedIn</a></span>
         </p>
 
         <hr>
 
-        <div class="cols">
-          <div>
-            <a href="/math/">Research</a> <br>
-            <a href="/notes/">Writings</a> <br>
-          </div>       
-        </div>
-        <p></p>
+        <nav>
+          <a href="/math/">Research</a><br>
+          <a href="/notes/">Writings</a>
+        </nav>
       </header>
-      
-      <section>
+    </aside>
 
+    <main class="content">
       {{ content }}
-
-      </section>
-      
-    </div>
+    </main>
   </body>
+
 </html>

@@ -1,0 +1,5 @@
+_build/
+.jekyll-cache/
+.jekyll-metadata
+.sass-cache/
+vendor/
