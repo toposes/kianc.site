@@ -1,7 +1,7 @@
 ---
 layout: default
 permalink: /math/
-title: math | Kian's (essentially small) site
+title: math | kianc.site
 ---
 
 this page is intentionally left blank

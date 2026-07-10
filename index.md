@@ -1,11 +1,11 @@
 ---
 permalink: /
-title: "Kian's (essentially small) site"
+title: About me | kianc.site
 ---
 
 ## About
 
-I am a graduate student studying math. I like the interplay between category theory and logic. My favorite adjunction is ∅ ⊣ ✳. Outside of math, I am quite fond of rhythm games such as DanceDanceRevolution.
+I am a graduate student studying math. I like the interplay between category theory and logic. My favorite adjunction is ∅ ⊣ ✳.
 
 <hr>
 
@@ -19,7 +19,7 @@ I am a graduate student studying math. I like the interplay between category the
 ## Research Interests
 
 - Categorical logic
-- Homotopy Type Theory
+- Homotopical semantics
 
 <hr>
 
@@ -31,7 +31,7 @@ At Carnegie Mellon University, I have served as a teaching assistant for many it
 - matrix algebra
 - concepts of mathematics
 
-In spring 2026, I will co-teach a course in categorical logic (joint effort with Owen Milner and Corinthia Aberle.)
+In spring 2026, I was a co-instructor for 80-514/80-814, a course in categorical logic (joint effort with Owen Milner and Corinthia Aberle.)
 
 <hr>
 

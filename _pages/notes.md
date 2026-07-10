@@ -1,7 +1,7 @@
 ---
 layout: default
 permalink: /notes/
-title: notes | Kian's (essentially small) site
+title: notes | kianc.site
 ---
 
 this page is intentionally left blank
