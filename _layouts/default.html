@@ -1,3 +1,4 @@
+{%- capture bio -%}{% include bio.html %}{%- endcapture -%}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -14,7 +15,7 @@
     <meta property="og:url" content="http://kianc.site">
     <meta property="og:type" content="website">
     <meta property="og:title" content="{{ site.title }}">
-    <meta property="og:description" content="{{ site.description }}">
+    <meta property="og:description" content="{{ bio | strip_newlines | strip }}">
     <meta property="og:image" content="http://kianc.site/assets/portrait.png">
 
     <link rel="stylesheet" href="{{ '/assets/styles.css' | relative_url }}">
@@ -22,15 +23,16 @@
   </head>
 
   <body>
+    <div class="wrapper">
     <aside class="sidebar">
       <header>
         <h1><a href="{{ '/' | relative_url }}">{{ site.title }}</a></h1>
         <img class="portrait" src="{{ '/assets/portrait.png' | relative_url }}" alt="Portrait of Kian" />
-        <p>{{ site.description }}</p>
+        <p class="bio">{{ bio }}</p>
         <p class="contact-info">
-          <span><i class="fa-solid fa-location-dot"></i> Pittsburgh, PA</span><br>
-          <span><i class="fa-brands fa-github"></i> <a href="https://github.com/toposes">Github</a></span><br>
-          <span><i class="fa-brands fa-linkedin"></i> <a href="https://www.linkedin.com/in/toposes">LinkedIn</a></span>
+          <span><i class="fa-solid fa-user"></i> he/him</span><br>
+          <span><i class="fa-solid fa-location-dot"></i> pittsburgh</span><br>
+          <span><i class="fa-brands fa-github"></i> <a href="https://github.com/toposes">toposes</a></span>
         </p>
 
         <hr>
@@ -42,9 +44,16 @@
       </header>
     </aside>
 
-    <main class="content">
+    <main id="swup" class="content">
       {{ content }}
     </main>
+    </div>
+
+    <!-- swup: client-side navigation so the sidebar (and portrait) never repaints -->
+    <script src="{{ '/assets/js/swup.umd.js' | relative_url }}"></script>
+    <script>
+      new Swup();
+    </script>
   </body>
 
 </html>

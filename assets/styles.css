@@ -5,6 +5,7 @@ html, body {
 body {
   margin: 0;
   display: flex;
+  justify-content: center;          /* center the whole layout on wide screens */
   overflow: hidden;                 /* the panes scroll, not the page */
   background-color: #fcf4a3;
   font: 14px/1.5 Ubuntu;
@@ -12,10 +13,17 @@ body {
   font-weight: 300;
 }
 
-/* ---- layout: fixed sidebar, scrollable content ---- */
+/* ---- layout: centered wrapper, fixed sidebar, scrollable content ---- */
+
+.wrapper {
+  display: flex;
+  width: 100%;
+  max-width: 950px;                 /* keeps the layout centered, not edge-to-edge */
+  height: 100vh;
+}
 
 .sidebar {
-  flex: 0 0 270px;                  /* fixed width, never shrinks */
+  flex: 0 0 350px;                  /* fixed width, never shrinks */
   height: 100vh;
   box-sizing: border-box;
   padding: 50px;
@@ -33,6 +41,28 @@ body {
 
 .content > * {
   max-width: 640px;                 /* keep line length readable */
+}
+
+/* hide scrollbars (keep scrolling) and disable the rubber-band overscroll */
+.sidebar,
+.content {
+  overscroll-behavior: none;        /* no bounce / scroll chaining */
+  scrollbar-width: none;            /* Firefox */
+  -ms-overflow-style: none;         /* old Edge */
+}
+
+.sidebar::-webkit-scrollbar,
+.content::-webkit-scrollbar {
+  display: none;                    /* Chrome / Safari */
+}
+
+/* swup: fade the content pane during client-side navigation */
+.content {
+  transition: opacity 0.2s ease;
+}
+
+html.is-animating .content {
+  opacity: 0;
 }
 
 /* ---- sidebar bits ---- */
@@ -163,6 +193,12 @@ hr {
     word-wrap: break-word;
   }
 
+  .wrapper {
+    display: block;
+    max-width: none;
+    height: auto;
+  }
+
   .sidebar,
   .content {
     width: auto;
@@ -188,6 +224,12 @@ hr {
     padding: 0.4in;
     font-size: 12pt;
     color: #444;
+  }
+
+  .wrapper {
+    display: block;
+    max-width: none;
+    height: auto;
   }
 
   .sidebar, .content {
