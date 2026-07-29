@@ -18,15 +18,15 @@ body {
 .wrapper {
   display: flex;
   width: 100%;
-  max-width: 950px;                 /* keeps the layout centered, not edge-to-edge */
+  max-width: 1000px;                /* keeps the layout centered, not edge-to-edge */
   height: 100vh;
 }
 
 .sidebar {
-  flex: 0 0 350px;                  /* fixed width, never shrinks */
+  flex: 0 0 300px;                  /* fixed width, never shrinks */
   height: 100vh;
   box-sizing: border-box;
-  padding: 50px;
+  padding: 50px 25px;
   overflow-y: auto;                 /* scrolls only if the sidebar itself overflows */
   -webkit-font-smoothing: subpixel-antialiased;
 }
@@ -35,12 +35,14 @@ body {
   flex: 1;
   height: 100vh;
   box-sizing: border-box;
-  padding: 50px;
+  padding: 50px 25px;
   overflow-y: auto;                 /* the scrollable pane */
 }
 
+/* The pane, not this cap, is what actually limits the column: 1000 wrapper
+   - 300 sidebar - 2x25 padding leaves 650px. Raise the wrapper to widen it. */
 .content > * {
-  max-width: 640px;                 /* keep line length readable */
+  max-width: 700px;
 }
 
 /* hide scrollbars (keep scrolling) and disable the rubber-band overscroll */
@@ -182,6 +184,36 @@ hr {
   background: #ffce1b;
   height: 1px;
   margin: 0 0 20px;
+}
+
+/* ---- paper table of contents (generated into _data by the Cart-Ded repo) ---- */
+
+.paper-toc,
+.paper-toc ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.paper-toc > li {
+  margin-bottom: 14px;
+}
+
+.paper-toc ul {
+  margin: 4px 0 0 18px;
+}
+
+.paper-toc ul li {
+  margin: 2px 0;
+}
+
+.paper-toc > li > a {
+  font-weight: 500;
+}
+
+.toc-num {
+  display: inline-block;
+  min-width: 2.2em;
+  color: #8a8a8a;
 }
 
 /* ---- narrow screens: stack the panes and let the page scroll ---- */

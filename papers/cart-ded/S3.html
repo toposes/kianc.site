@@ -1,0 +1,446 @@
+---
+layout: default
+permalink: /papers/cart-ded/S3.html
+title: 3 Motivating Example | kianc.site
+paper_page: true
+extra_css:
+  - /papers/cart-ded/LaTeXML.css?v=e7bbb861
+  - /papers/cart-ded/ltx-article.css?v=ff496feb
+  - /papers/cart-ded/html-theme.css?v=e17b1b8f
+---
+{% raw %}
+<header class="ltx_page_header">
+<div class="ltx_align_center">
+<a href="S2.html" title="" class="ltx_ref" rel="prev"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">2 </span>Weak Orthogonality</span></a><a href="S4.html" title="" class="ltx_ref" rel="next"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">4 </span>Local Model Structure</span></a>
+</div></header>
+<div class="ltx_page_content">
+<section class="ltx_section">
+<h1 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">3 </span>Motivating Example</h1>
+
+<section id="SS1" class="ltx_subsection">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">3.1 </span>Cube categories</h2>
+
+<div id="Thmdefn1" class="ltx_theorem ltx_theorem_defn">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Definition 3.1</span></span><span class="ltx_text ltx_font_bold"> </span>(Cartesian cube category, <math id="Thmdefn1.m1" class="ltx_Math" alttext="\mathbb{C}" display="inline"><mi>ℂ</mi></math>)<span class="ltx_text ltx_font_bold">.</span>
+</h6>
+<div id="Thmdefn1.p1" class="ltx_para">
+<p class="ltx_p">The <em class="ltx_emph ltx_font_italic">Cartesian cube category</em>, denoted <math id="Thmdefn1.p1.m1" class="ltx_Math" alttext="\mathbb{C}" display="inline"><mi>ℂ</mi></math>, is the Lawvere theory with constants <math id="Thmdefn1.p1.m2" class="ltx_Math" alttext="0" display="inline"><mn>0</mn></math>, <math id="Thmdefn1.p1.m3" class="ltx_Math" alttext="1" display="inline"><mn>1</mn></math>, and no other operations (the theory of bipointed objects, the initial Lawvere theory with two constants.)
+A substitution</p>
+<table id="Ex8" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ex8.m1" class="ltx_Math" alttext="(x_{1},\dots,x_{m}\mid a_{1},\dots,a_{n})" display="block"><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><mrow><msub><mi>x</mi><mi>m</mi></msub><mo>∣</mo><mrow><msub><mi>a</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>a</mi><mi>n</mi></msub></mrow></mrow><mo stretchy="false">)</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">is a morphism in <math id="Thmdefn1.p1.m4" class="ltx_Math" alttext="\mathbb{C}" display="inline"><mi>ℂ</mi></math> if <math id="Thmdefn1.p1.m5" class="ltx_Math" alttext="a_{i}" display="inline"><msub><mi>a</mi><mi>i</mi></msub></math> is a term in the language with only constants 0 and 1, which means precisely that <math id="Thmdefn1.p1.m6" class="ltx_Math" alttext="a_{i}\in\{0,x_{1},\dots,x_{m},1\}" display="inline"><mrow><msub><mi>a</mi><mi>i</mi></msub><mo>∈</mo><mrow><mo stretchy="false">{</mo><mn>0</mn><mo>,</mo><msub><mi>x</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>x</mi><mi>m</mi></msub><mo>,</mo><mn>1</mn><mo stretchy="false">}</mo></mrow></mrow></math>.</p>
+</div>
+</div>
+<div id="Thmdefn2" class="ltx_theorem ltx_theorem_defn">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Definition 3.2</span></span><span class="ltx_text ltx_font_bold"> </span>(Dedekind cube category, <math id="Thmdefn2.m1" class="ltx_Math" alttext="\mathbb{D}" display="inline"><mi>𝔻</mi></math>)<span class="ltx_text ltx_font_bold">.</span>
+</h6>
+<div id="Thmdefn2.p1" class="ltx_para">
+<p class="ltx_p">The <em class="ltx_emph ltx_font_italic">Dedekind cube category</em>, denoted <math id="Thmdefn2.p1.m1" class="ltx_Math" alttext="\mathbb{D}" display="inline"><mi>𝔻</mi></math>, is the Lawvere theory of bounded distributive lattices. It has two binary operations, <math id="Thmdefn2.p1.m2" class="ltx_Math" alttext="\wedge" display="inline"><mo>∧</mo></math> (meet) and <math id="Thmdefn2.p1.m3" class="ltx_Math" alttext="\vee" display="inline"><mo>∨</mo></math> (join), called <em class="ltx_emph ltx_font_italic">connections</em>, which are both commutative, associative, idempotent and subject to these additional axioms:</p>
+<ul id="I1" class="ltx_itemize">
+<li id="I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="I1.i1.p1" class="ltx_para">
+<p class="ltx_p">identity: <math id="I1.i1.p1.m1" class="ltx_Math" alttext="a\vee 0=a" display="inline"><mrow><mrow><mi>a</mi><mo>∨</mo><mn>0</mn></mrow><mo>=</mo><mi>a</mi></mrow></math> and <math id="I1.i1.p1.m2" class="ltx_Math" alttext="a\wedge 1=a" display="inline"><mrow><mrow><mi>a</mi><mo>∧</mo><mn>1</mn></mrow><mo>=</mo><mi>a</mi></mrow></math></p>
+</div>
+</li>
+<li id="I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="I1.i2.p1" class="ltx_para">
+<p class="ltx_p">absorption: <math id="I1.i2.p1.m1" class="ltx_Math" alttext="a\vee(a\wedge b)=a" display="inline"><mrow><mrow><mi>a</mi><mo>∨</mo><mrow><mo stretchy="false">(</mo><mrow><mi>a</mi><mo>∧</mo><mi>b</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mi>a</mi></mrow></math> and <math id="I1.i2.p1.m2" class="ltx_Math" alttext="a\wedge(a\vee b)=a" display="inline"><mrow><mrow><mi>a</mi><mo>∧</mo><mrow><mo stretchy="false">(</mo><mrow><mi>a</mi><mo>∨</mo><mi>b</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mi>a</mi></mrow></math></p>
+</div>
+</li>
+<li id="I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="I1.i3.p1" class="ltx_para ltx_noindent">
+<p class="ltx_p">distributivity: <math id="I1.i3.p1.m1" class="ltx_Math" alttext="a\vee(b\wedge c)=(a\vee b)\wedge(a\vee c)" display="inline"><mrow><mrow><mi>a</mi><mo>∨</mo><mrow><mo stretchy="false">(</mo><mrow><mi>b</mi><mo>∧</mo><mi>c</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>a</mi><mo>∨</mo><mi>b</mi></mrow><mo stretchy="false">)</mo></mrow><mo>∧</mo><mrow><mo stretchy="false">(</mo><mrow><mi>a</mi><mo>∨</mo><mi>c</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math> and <math id="I1.i3.p1.m2" class="ltx_Math" alttext="a\wedge(b\vee c)=(a\wedge b)\vee(b\wedge c)" display="inline"><mrow><mrow><mi>a</mi><mo>∧</mo><mrow><mo stretchy="false">(</mo><mrow><mi>b</mi><mo>∨</mo><mi>c</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>a</mi><mo>∧</mo><mi>b</mi></mrow><mo stretchy="false">)</mo></mrow><mo>∨</mo><mrow><mo stretchy="false">(</mo><mrow><mi>b</mi><mo>∧</mo><mi>c</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math></p>
+</div>
+</li>
+</ul>
+<p class="ltx_p">A substitution <math id="Thmdefn2.p1.m4" class="ltx_Math" alttext="(x_{1},\dots,x_{m}\mid a_{1},\dots,a_{n})" display="inline"><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><mrow><msub><mi>x</mi><mi>m</mi></msub><mo>∣</mo><mrow><msub><mi>a</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>a</mi><mi>n</mi></msub></mrow></mrow><mo stretchy="false">)</mo></mrow></math> is a morphism in <math id="Thmdefn2.p1.m5" class="ltx_Math" alttext="\mathbb{D}" display="inline"><mi>𝔻</mi></math> if <math id="Thmdefn2.p1.m6" class="ltx_Math" alttext="a_{i}" display="inline"><msub><mi>a</mi><mi>i</mi></msub></math> is a term in this larger language. Two morphisms <math id="Thmdefn2.p1.m7" class="ltx_Math" alttext="(x_{1},\dots,x_{m}\mid a_{1},\dots,a_{n})" display="inline"><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><mrow><msub><mi>x</mi><mi>m</mi></msub><mo>∣</mo><mrow><msub><mi>a</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>a</mi><mi>n</mi></msub></mrow></mrow><mo stretchy="false">)</mo></mrow></math>, <math id="Thmdefn2.p1.m8" class="ltx_Math" alttext="(x_{1},\dots,x_{m}\mid b_{1},\dots,b_{n})" display="inline"><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><mrow><msub><mi>x</mi><mi>m</mi></msub><mo>∣</mo><mrow><msub><mi>b</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>b</mi><mi>n</mi></msub></mrow></mrow><mo stretchy="false">)</mo></mrow></math> are identified whenever <math id="Thmdefn2.p1.m9" class="ltx_Math" alttext="a_{i}" display="inline"><msub><mi>a</mi><mi>i</mi></msub></math> and <math id="Thmdefn2.p1.m10" class="ltx_Math" alttext="b_{i}" display="inline"><msub><mi>b</mi><mi>i</mi></msub></math> are provably equal under the axioms.</p>
+</div>
+</div>
+<div id="Thmrmkx1" class="ltx_theorem ltx_theorem_rmk">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Remark</span></span><span class="ltx_text ltx_font_bold">.</span>
+</h6>
+<div id="Thmrmkx1.p1" class="ltx_para">
+<p class="ltx_p">In <math id="Thmrmkx1.p1.m1" class="ltx_Math" alttext="\mathbb{C}" display="inline"><mi>ℂ</mi></math> and <math id="Thmrmkx1.p1.m2" class="ltx_Math" alttext="\mathbb{D}" display="inline"><mi>𝔻</mi></math>, we have <math id="Thmrmkx1.p1.m3" class="ltx_Math" alttext="[n]=[1]^{n}" display="inline"><mrow><mrow><mo stretchy="false">[</mo><mi>n</mi><mo stretchy="false">]</mo></mrow><mo>=</mo><msup><mrow><mo stretchy="false">[</mo><mn>1</mn><mo stretchy="false">]</mo></mrow><mi>n</mi></msup></mrow></math> as they are Lawvere theories.</p>
+</div>
+</div>
+<div id="Thmdefn3" class="ltx_theorem ltx_theorem_const">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Construction 3.3</span></span><span class="ltx_text ltx_font_bold"> </span>(Canonical inclusions)<span class="ltx_text ltx_font_bold">.</span>
+</h6>
+<div id="Thmdefn3.p1" class="ltx_para">
+<p class="ltx_p">We have an identity-on-objects inclusion</p>
+<table id="Ex9" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ex9.m1" class="ltx_Math" alttext="j:\mathbb{C}\rightarrow\mathbb{D}" display="block"><mrow><mi>j</mi><mo lspace="0.278em" rspace="0.278em">:</mo><mrow><mi>ℂ</mi><mo stretchy="false">→</mo><mi>𝔻</mi></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">sending a morphism <math id="Thmdefn3.p1.m1" class="ltx_Math" alttext="(x_{1},\dots,x_{m}\mid a_{1},\dots,a_{n}):[m]\rightarrow[n]" display="inline"><mrow><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><mrow><msub><mi>x</mi><mi>m</mi></msub><mo>∣</mo><mrow><msub><mi>a</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>a</mi><mi>n</mi></msub></mrow></mrow><mo rspace="0.278em" stretchy="false">)</mo></mrow><mo rspace="0.278em">:</mo><mrow><mrow><mo stretchy="false">[</mo><mi>m</mi><mo stretchy="false">]</mo></mrow><mo stretchy="false">→</mo><mrow><mo stretchy="false">[</mo><mi>n</mi><mo stretchy="false">]</mo></mrow></mrow></mrow></math> in <math id="Thmdefn3.p1.m2" class="ltx_Math" alttext="\mathbb{C}" display="inline"><mi>ℂ</mi></math> to the morphism presented by the same substitution (now seen as terms in the expanded language with connections) in <math id="Thmdefn3.p1.m3" class="ltx_Math" alttext="\mathbb{D}" display="inline"><mi>𝔻</mi></math>. This assignment is faithful because different variables and constants cannot become provably equal, even under the presence of connections.</p>
+</div>
+</div>
+<div id="Thmrmkx2" class="ltx_theorem ltx_theorem_rmk">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Remark</span></span><span class="ltx_text ltx_font_bold">.</span>
+</h6>
+<div id="Thmrmkx2.p1" class="ltx_para">
+<p class="ltx_p"><math id="Thmrmkx2.p1.m1" class="ltx_Math" alttext="\mathbb{D}" display="inline"><mi>𝔻</mi></math> can be any of the other cartesian cubical categories. Any Lawvere theory with constants 0 and 1 will work here, including join semi-lattices or cubes with negations. We use the Dedekind cube category for <math id="Thmrmkx2.p1.m2" class="ltx_Math" alttext="\mathbb{D}" display="inline"><mi>𝔻</mi></math> with the aim of constructing a model structure on <math id="Thmrmkx2.p1.m3" class="ltx_Math" alttext="\widehat{\mathbb{D}}" display="inline"><mover accent="true"><mi>𝔻</mi><mo>^</mo></mover></math> which presents spaces.</p>
+</div>
+</div>
+<div id="Thmdefn4" class="ltx_theorem ltx_theorem_const">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Construction 3.4</span></span><span class="ltx_text ltx_font_bold">.</span>
+</h6>
+<div id="Thmdefn4.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text" style="background-color:#FFFF00;"><math id="Thmdefn4.p1.m1" class="ltx_Math" alttext="j^{*}" display="inline"><msup><mi mathbackground="#FFFF00">j</mi><mo mathbackground="#FFFF00">∗</mo></msup></math> and its left and right Kan extensions along Yoneda embedding form an adjoint triple.</span></p>
+</div>
+</div>
+<div id="Thmdefn5" class="ltx_theorem ltx_theorem_prop">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Proposition 3.5</span></span><span class="ltx_text ltx_font_bold">.</span>
+</h6>
+<div id="Thmdefn5.p1" class="ltx_para">
+<p class="ltx_p"><math id="Thmdefn5.p1.m1" class="ltx_Math" alttext="j^{*}" display="inline"><msup><mi>j</mi><mo>∗</mo></msup></math> is conservative. In particular, it is faithful.</p>
+</div>
+</div>
+<div class="ltx_proof">
+<h6 class="ltx_title ltx_runin ltx_font_italic ltx_title_proof">Proof.</h6>
+<div id="SS1.p1" class="ltx_para">
+<p class="ltx_p">The canonical inclusion <math id="SS1.p1.m1" class="ltx_Math" alttext="j:\mathbb{C}\rightarrow\mathbb{D}" display="inline"><mrow><mi>j</mi><mo lspace="0.278em" rspace="0.278em">:</mo><mrow><mi>ℂ</mi><mo stretchy="false">→</mo><mi>𝔻</mi></mrow></mrow></math> is identity on objects, in particular surjective on objects. Hence, the restriction <math id="SS1.p1.m2" class="ltx_Math" alttext="j^{*}" display="inline"><msup><mi>j</mi><mo>∗</mo></msup></math> is conservative.
+∎</p>
+</div>
+</div>
+</section>
+<section id="SS2" class="ltx_subsection">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">3.2 </span>Geometric morphisms</h2>
+
+<div id="Thmdefn6" class="ltx_theorem ltx_theorem_prop">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Proposition 3.6</span></span><span class="ltx_text ltx_font_bold">.</span>
+</h6>
+<div id="Thmdefn6.p1" class="ltx_para">
+<p class="ltx_p">The adjunction <math id="Thmdefn6.p1.m1" class="ltx_Math" alttext="j^{*}\dashv j_{*}" display="inline"><mrow><msup><mi>j</mi><mo>∗</mo></msup><mo>⊣</mo><msub><mi>j</mi><mo>∗</mo></msub></mrow></math> is a geometric morphism <math id="Thmdefn6.p1.m2" class="ltx_Math" alttext="\widehat{\mathbb{C}}\rightarrow\widehat{\mathbb{D}}" display="inline"><mrow><mover accent="true"><mi>ℂ</mi><mo>^</mo></mover><mo stretchy="false">→</mo><mover accent="true"><mi>𝔻</mi><mo>^</mo></mover></mrow></math>.</p>
+</div>
+</div>
+<div id="Thmdefn7" class="ltx_theorem ltx_theorem_prop">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Proposition 3.7</span></span><span class="ltx_text ltx_font_bold">.</span>
+</h6>
+<div id="Thmdefn7.p1" class="ltx_para">
+<p class="ltx_p">Any flat distributive lattice is strictly bipointed.</p>
+</div>
+</div>
+<div id="Thmdefn8" class="ltx_theorem ltx_theorem_prop">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Proposition 3.8</span></span><span class="ltx_text ltx_font_bold">.</span>
+</h6>
+<div id="Thmdefn8.p1" class="ltx_para">
+<p class="ltx_p">The adjunction <math id="Thmdefn8.p1.m1" class="ltx_Math" alttext="j_{!}\dashv j^{*}" display="inline"><mrow><msub><mi>j</mi><mo>!</mo></msub><mo>⊣</mo><msup><mi>j</mi><mo>∗</mo></msup></mrow></math> is a geometric morphism <math id="Thmdefn8.p1.m2" class="ltx_Math" alttext="\widehat{\mathbb{D}}\rightarrow\widehat{\mathbb{C}}" display="inline"><mrow><mover accent="true"><mi>𝔻</mi><mo>^</mo></mover><mo stretchy="false">→</mo><mover accent="true"><mi>ℂ</mi><mo>^</mo></mover></mrow></math>.</p>
+</div>
+</div>
+</section>
+<section id="SS3" class="ltx_subsection">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">3.3 </span>Left Quillen</h2>
+
+<div id="Thmdefn9" class="ltx_theorem ltx_theorem_prop">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Proposition 3.9</span></span><span class="ltx_text ltx_font_bold">.</span>
+</h6>
+<div id="Thmdefn9.p1" class="ltx_para">
+<p class="ltx_p"><math id="Thmdefn9.p1.m1" class="ltx_Math" alttext="j^{*}:\widehat{\mathbb{D}}_{\mathsf{int}}\rightarrow\widehat{\mathbb{C}}_{%
+\mathsf{int}}" display="inline"><mrow><msup><mi>j</mi><mo>∗</mo></msup><mo lspace="0.278em" rspace="0.278em">:</mo><mrow><msub><mover accent="true"><mi>𝔻</mi><mo>^</mo></mover><mi>𝗂𝗇𝗍</mi></msub><mo stretchy="false">→</mo><msub><mover accent="true"><mi>ℂ</mi><mo>^</mo></mover><mi>𝗂𝗇𝗍</mi></msub></mrow></mrow></math> is left Quillen.</p>
+</div>
+</div>
+<div class="ltx_proof">
+<h6 class="ltx_title ltx_runin ltx_font_italic ltx_title_proof">Proof.</h6>
+<div id="SS3.p1" class="ltx_para">
+<p class="ltx_p"><math id="SS3.p1.m1" class="ltx_Math" alttext="\widehat{\mathbb{D}}_{\mathsf{int}}=\widehat{\mathbb{D}}_{\mathsf{cis}}" display="inline"><mrow><msub><mover accent="true"><mi>𝔻</mi><mo>^</mo></mover><mi>𝗂𝗇𝗍</mi></msub><mo>=</mo><msub><mover accent="true"><mi>𝔻</mi><mo>^</mo></mover><mi>𝖼𝗂𝗌</mi></msub></mrow></math> since <math id="SS3.p1.m2" class="ltx_Math" alttext="\delta" display="inline"><mi>δ</mi></math> is a retract of an anodyne cofibration in <math id="SS3.p1.m3" class="ltx_Math" alttext="\widehat{\mathbb{D}}" display="inline"><mover accent="true"><mi>𝔻</mi><mo>^</mo></mover></math>. Anodyne cofibrations in <math id="SS3.p1.m4" class="ltx_Math" alttext="\widehat{\mathbb{C}}" display="inline"><mover accent="true"><mi>ℂ</mi><mo>^</mo></mover></math> are trivial cofibrations in <math id="SS3.p1.m5" class="ltx_Math" alttext="\widehat{\mathbb{C}}_{\mathsf{int}}" display="inline"><msub><mover accent="true"><mi>ℂ</mi><mo>^</mo></mover><mi>𝗂𝗇𝗍</mi></msub></math>. Any <math id="SS3.p1.m6" class="ltx_Math" alttext="s:A\rightarrow B" display="inline"><mrow><mi>s</mi><mo lspace="0.278em" rspace="0.278em">:</mo><mrow><mi>A</mi><mo stretchy="false">→</mo><mi>B</mi></mrow></mrow></math> exhibiting <math id="SS3.p1.m7" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> as a strong deformation retract of <math id="SS3.p1.m8" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math> is anodyne. <math id="SS3.p1.m9" class="ltx_Math" alttext="j^{*}\delta_{0}:1\rightarrow j^{*}\mathsf{J}" display="inline"><mrow><mrow><msup><mi>j</mi><mo>∗</mo></msup><mo>⁢</mo><msub><mi>δ</mi><mn>0</mn></msub></mrow><mo lspace="0.278em" rspace="0.278em">:</mo><mrow><mn>1</mn><mo stretchy="false">→</mo><mrow><msup><mi>j</mi><mo>∗</mo></msup><mo>⁢</mo><mi>𝖩</mi></mrow></mrow></mrow></math> is a strong deformation retract of <math id="SS3.p1.m10" class="ltx_Math" alttext="j^{*}\mathsf{J}" display="inline"><mrow><msup><mi>j</mi><mo>∗</mo></msup><mo>⁢</mo><mi>𝖩</mi></mrow></math>, hence it is a trivial cofibration in <math id="SS3.p1.m11" class="ltx_Math" alttext="\widehat{\mathbb{C}}_{\mathsf{int}}" display="inline"><msub><mover accent="true"><mi>ℂ</mi><mo>^</mo></mover><mi>𝗂𝗇𝗍</mi></msub></math>. Then <math id="SS3.p1.m12" class="ltx_Math" alttext="j^{*}:\widehat{\mathbb{D}}_{\mathsf{cis}}\rightarrow\widehat{\mathbb{C}}_{%
+\mathsf{int}}" display="inline"><mrow><msup><mi>j</mi><mo>∗</mo></msup><mo lspace="0.278em" rspace="0.278em">:</mo><mrow><msub><mover accent="true"><mi>𝔻</mi><mo>^</mo></mover><mi>𝖼𝗂𝗌</mi></msub><mo stretchy="false">→</mo><msub><mover accent="true"><mi>ℂ</mi><mo>^</mo></mover><mi>𝗂𝗇𝗍</mi></msub></mrow></mrow></math> is left Quillen. Since <math id="SS3.p1.m13" class="ltx_Math" alttext="\widehat{\mathbb{D}}_{\mathsf{int}}=\widehat{\mathbb{D}}_{\mathsf{cis}}" display="inline"><mrow><msub><mover accent="true"><mi>𝔻</mi><mo>^</mo></mover><mi>𝗂𝗇𝗍</mi></msub><mo>=</mo><msub><mover accent="true"><mi>𝔻</mi><mo>^</mo></mover><mi>𝖼𝗂𝗌</mi></msub></mrow></math>, <math id="SS3.p1.m14" class="ltx_Math" alttext="j^{*}" display="inline"><msup><mi>j</mi><mo>∗</mo></msup></math> is left Quillen between the interval model structures.
+∎</p>
+</div>
+</div>
+<div id="Thmdefn10" class="ltx_theorem ltx_theorem_prop">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Proposition 3.10</span></span><span class="ltx_text ltx_font_bold">.</span>
+</h6>
+<div id="Thmdefn10.p1" class="ltx_para">
+<p class="ltx_p"><math id="Thmdefn10.p1.m1" class="ltx_Math" alttext="\mathsf{id}:\widehat{\mathbb{C}}_{\mathsf{int}}\rightarrow\widehat{\mathbb{C}}%
+_{\mathsf{eqv}}" display="inline"><mrow><mi>𝗂𝖽</mi><mo lspace="0.278em" rspace="0.278em">:</mo><mrow><msub><mover accent="true"><mi>ℂ</mi><mo>^</mo></mover><mi>𝗂𝗇𝗍</mi></msub><mo stretchy="false">→</mo><msub><mover accent="true"><mi>ℂ</mi><mo>^</mo></mover><mi>𝖾𝗊𝗏</mi></msub></mrow></mrow></math> is left Quillen.</p>
+</div>
+</div>
+<div class="ltx_proof">
+<h6 class="ltx_title ltx_runin ltx_font_italic ltx_title_proof">Proof.</h6>
+<div id="SS3.p2" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text" style="background-color:#FFFF00;"><math id="SS3.p2.m1" class="ltx_Math" alttext="\widehat{\mathbb{C}}_{\mathsf{eqv}}" display="inline"><msub><mover accent="true"><mi mathbackground="#FFFF00">ℂ</mi><mo mathbackground="#FFFF00">^</mo></mover><mi mathbackground="#FFFF00">𝖾𝗊𝗏</mi></msub></math> has more trivial cofibrations.</span> (find section in ACCRS) <cite class="ltx_cite ltx_citemacro_cite">[<a href="bib.html#bib1" title="The equivariant model structure on cartesian cubical sets" class="ltx_ref">1</a>]</cite>
+∎</p>
+</div>
+</div>
+<div id="Thmdefn11" class="ltx_theorem ltx_theorem_prop">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Proposition 3.11</span></span><span class="ltx_text ltx_font_bold">.</span>
+</h6>
+<div id="Thmdefn11.p1" class="ltx_para">
+<p class="ltx_p"><math id="Thmdefn11.p1.m1" class="ltx_Math" alttext="\widehat{\mathbb{D}}_{\mathsf{int}}" display="inline"><msub><mover accent="true"><mi>𝔻</mi><mo>^</mo></mover><mi>𝗂𝗇𝗍</mi></msub></math> and <math id="Thmdefn11.p1.m2" class="ltx_Math" alttext="\widehat{\mathbb{D}}_{\mathsf{eqv}}" display="inline"><msub><mover accent="true"><mi>𝔻</mi><mo>^</mo></mover><mi>𝖾𝗊𝗏</mi></msub></math> coincide.</p>
+</div>
+</div>
+<div class="ltx_proof">
+<h6 class="ltx_title ltx_runin ltx_font_italic ltx_title_proof">Proof.</h6>
+<div id="SS3.p3" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text" style="background-color:#FFFF00;">Cavallo-Sattler</span> (find section) <cite class="ltx_cite ltx_citemacro_cite">[<a href="bib.html#bib4" title="Relative elegance and cartesian cubes with one connection" class="ltx_ref">2</a>]</cite>
+∎</p>
+</div>
+</div>
+<div id="Thmdefn12" class="ltx_theorem ltx_theorem_prop">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Proposition 3.12</span></span><span class="ltx_text ltx_font_bold">.</span>
+</h6>
+<div id="Thmdefn12.p1" class="ltx_para">
+<p class="ltx_p"><math id="Thmdefn12.p1.m1" class="ltx_Math" alttext="j^{*}:\widehat{\mathbb{D}}_{\mathsf{eqv}}\rightarrow\widehat{\mathbb{C}}_{%
+\mathsf{eqv}}" display="inline"><mrow><msup><mi>j</mi><mo>∗</mo></msup><mo lspace="0.278em" rspace="0.278em">:</mo><mrow><msub><mover accent="true"><mi>𝔻</mi><mo>^</mo></mover><mi>𝖾𝗊𝗏</mi></msub><mo stretchy="false">→</mo><msub><mover accent="true"><mi>ℂ</mi><mo>^</mo></mover><mi>𝖾𝗊𝗏</mi></msub></mrow></mrow></math> is left Quillen.</p>
+</div>
+</div>
+<div class="ltx_proof">
+<h6 class="ltx_title ltx_runin ltx_font_italic ltx_title_proof">Proof.</h6>
+<div id="SS3.p4" class="ltx_para">
+<p class="ltx_p">By <a href="#Thmdefn9" title="Proposition 3.9. ‣ 3.3 Left Quillen ‣ 3 Motivating Example" class="ltx_ref"><span class="ltx_text ltx_ref_tag">3.9</span></a> and <a href="#Thmdefn10" title="Proposition 3.10. ‣ 3.3 Left Quillen ‣ 3 Motivating Example" class="ltx_ref"><span class="ltx_text ltx_ref_tag">3.10</span></a>, <math id="SS3.p4.m1" class="ltx_Math" alttext="j^{*}=\mathsf{id}\circ j^{*}" display="inline"><mrow><msup><mi>j</mi><mo>∗</mo></msup><mo>=</mo><mrow><mi>𝗂𝖽</mi><mo lspace="0.222em" rspace="0.222em">∘</mo><msup><mi>j</mi><mo>∗</mo></msup></mrow></mrow></math> is left Quillen from <math id="SS3.p4.m2" class="ltx_Math" alttext="\widehat{\mathbb{D}}_{\mathsf{int}}" display="inline"><msub><mover accent="true"><mi>𝔻</mi><mo>^</mo></mover><mi>𝗂𝗇𝗍</mi></msub></math> to <math id="SS3.p4.m3" class="ltx_Math" alttext="\widehat{\mathbb{C}}_{\mathsf{eqv}}" display="inline"><msub><mover accent="true"><mi>ℂ</mi><mo>^</mo></mover><mi>𝖾𝗊𝗏</mi></msub></math>, as it is a composite of left Quillen functors</p>
+<table id="Ex10" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ex10.m1" class="ltx_Math" alttext="\widehat{\mathbb{D}}_{\mathsf{int}}\xrightarrow{j^{*}}\widehat{\mathbb{C}}_{%
+\mathsf{int}}\xrightarrow{\mathsf{id}}\widehat{\mathbb{C}}_{\mathsf{eqv}}" display="block"><mrow><msub><mover accent="true"><mi>𝔻</mi><mo>^</mo></mover><mi>𝗂𝗇𝗍</mi></msub><mover accent="true"><mo stretchy="false">→</mo><msup><mi>j</mi><mo>∗</mo></msup></mover><msub><mover accent="true"><mi>ℂ</mi><mo>^</mo></mover><mi>𝗂𝗇𝗍</mi></msub><mover accent="true"><mo stretchy="false">→</mo><mo>𝗂𝖽</mo></mover><msub><mover accent="true"><mi>ℂ</mi><mo>^</mo></mover><mi>𝖾𝗊𝗏</mi></msub></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">Then use the fact that <math id="SS3.p4.m4" class="ltx_Math" alttext="\widehat{\mathbb{D}}_{\mathsf{int}}=\widehat{\mathbb{D}}_{\mathsf{eqv}}" display="inline"><mrow><msub><mover accent="true"><mi>𝔻</mi><mo>^</mo></mover><mi>𝗂𝗇𝗍</mi></msub><mo>=</mo><msub><mover accent="true"><mi>𝔻</mi><mo>^</mo></mover><mi>𝖾𝗊𝗏</mi></msub></mrow></math>, as in <a href="#Thmdefn11" title="Proposition 3.11. ‣ 3.3 Left Quillen ‣ 3 Motivating Example" class="ltx_ref"><span class="ltx_text ltx_ref_tag">3.11</span></a>.
+∎</p>
+</div>
+</div>
+</section>
+<section id="SS4" class="ltx_subsection">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">3.4 </span>Right Quillen</h2>
+
+<div id="Thmdefn13" class="ltx_theorem ltx_theorem_prop">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Proposition 3.13</span></span><span class="ltx_text ltx_font_bold">.</span>
+</h6>
+<div id="Thmdefn13.p1" class="ltx_para">
+<p class="ltx_p">The following commutes:</p>
+<table id="Ex11" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><!-- This file was generated by dvisvgm 3.4.3 -->
+<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='105.6881pt' height='86.5189pt' viewBox='2.6158 -40.3524 105.6881 86.5189' class="ltx_picture">
+<defs>
+<path id='g13-106' d='M3.291656-4.97335C3.291656-5.124782 3.172105-5.276214 2.980822-5.276214C2.741719-5.276214 2.534496-5.053051 2.534496-4.845828C2.534496-4.694396 2.654047-4.542964 2.84533-4.542964C3.084433-4.542964 3.291656-4.766127 3.291656-4.97335ZM1.625903 .398506C1.506351 .884682 1.115816 1.40274 .629639 1.40274C.502117 1.40274 .382565 1.370859 .366625 1.362889C.613699 1.243337 .645579 1.028144 .645579 .956413C.645579 .765131 .502117 .661519 .334745 .661519C.103611 .661519-.111582 .860772-.111582 1.123786C-.111582 1.42665 .183313 1.625903 .637609 1.625903C1.123786 1.625903 2.000498 1.323039 2.239601 .366625L2.956912-2.486675C2.980822-2.582316 2.996762-2.646077 2.996762-2.765629C2.996762-3.203985 2.646077-3.514819 2.183811-3.514819C1.338979-3.514819 .844832-2.399004 .844832-2.295392C.844832-2.223661 .900623-2.191781 .964384-2.191781C1.052055-2.191781 1.060025-2.215691 1.115816-2.335243C1.354919-2.885181 1.761395-3.291656 2.1599-3.291656C2.327273-3.291656 2.422914-3.180075 2.422914-2.917061C2.422914-2.805479 2.399004-2.693898 2.375093-2.582316L1.625903 .398506Z'/>
+<path id='g15-33' d='M1.41071-3.93325C1.41071-4.148443 1.225405-4.273973 1.052055-4.273973S.6934-4.148443 .6934-3.93325L.932503-1.327024C.938481-1.231382 .950436-1.177584 1.052055-1.177584S1.165629-1.231382 1.171606-1.327024L1.41071-3.93325ZM1.41071-.358655C1.41071-.549938 1.255293-.71731 1.052055-.71731C.854795-.71731 .6934-.549938 .6934-.358655S.848817 0 1.052055 0C1.249315 0 1.41071-.167372 1.41071-.358655Z'/>
+<path id='g16-1' d='M3.761893-5.531258C3.674222-5.69066 3.57858-5.69066 3.52279-5.69066S3.371357-5.69066 3.283686-5.531258L.462267-.199253C.406476-.111582 .406476-.095641 .406476-.079701C.406476 0 .470237 0 .597758 0H6.447821C6.583313 0 6.639103 0 6.639103-.079701C6.639103-.095641 6.639103-.111582 6.583313-.199253L3.761893-5.531258ZM3.259776-4.909589L5.531258-.629639H.988294L3.259776-4.909589Z'/>
+<path id='g16-6' d='M3.108344-2.582316C3.203985-2.669988 3.203985-2.685928 3.203985-2.725778C3.203985-2.757659 3.172105-2.805479 3.148194-2.83736L1.43462-5.180573H3.379328C4.622665-5.180573 5.228394-4.99726 5.387796-3.634371H5.634869L5.403736-5.443587H.70137C.526027-5.443587 .470237-5.443587 .470237-5.260274L2.566376-2.383064L.557908-.247073C.486177-.167372 .470237-.159402 .470237-.111582C.470237 0 .573848 0 .70137 0H5.403736L5.634869-1.904857H5.387796C5.212453-.581818 4.710336-.358655 3.347447-.358655H1.020174L3.108344-2.582316Z'/>
+<path id='g6-67' d='M7.854545-8.021918C7.854545-8.225156 7.854545-8.416438 7.651308-8.416438C7.639352-8.416438 7.460025-8.416438 7.436115-8.201245C7.400249-7.866501 7.12528-7.866501 7.041594-7.866501C6.623163-7.866501 6.204732-8.045828 5.965629-8.153425C5.355915-8.416438 4.841843-8.416438 4.65056-8.416438C2.654047-8.416438 .442341-7.161146 .442341-4.100623C.442341-1.052055 2.606227 .227148 4.674471 .227148C5.308095 .227148 6.156912 .095641 7.029639-.430386C7.579577-.777086 8.18929-1.374844 8.18929-1.542217S8.009963-1.78132 7.938232-1.78132C7.854545-1.78132 7.806725-1.745455 7.687173-1.613948C6.993773-.824907 5.929763-.3467 4.865753-.3467C3.012702-.3467 2.546451-2.223661 2.546451-4.076712C2.546451-6.43188 3.407223-7.998007 4.686426-7.998007C5.583064-7.998007 7.017684-7.12528 7.424159-5.858032C7.460025-5.750436 7.49589-5.630884 7.651308-5.630884C7.854545-5.630884 7.854545-5.822167 7.854545-6.025405V-8.021918ZM7.436115-6.790535C7.292653-6.993773 7.137235-7.149191 6.838356-7.460025C6.898132-7.44807 6.993773-7.44807 7.053549-7.44807C7.185056-7.44807 7.340473-7.47198 7.436115-7.531756V-6.790535ZM3.19203-7.723039C2.917061-7.44807 2.12802-6.419925 2.12802-4.076712C2.12802-2.893151 2.307347-1.243337 3.383313-.382565C1.422665-1.016189 .860772-2.630137 .860772-4.088667C.860772-6.288418 2.068244-7.352428 3.19203-7.734994V-7.723039Z'/>
+<path id='g6-68' d='M.597758-8.18929C.382565-8.18929 .191283-8.18929 .191283-7.974097C.191283-7.770859 .418431-7.770859 .514072-7.770859C1.135741-7.770859 1.183562-7.675218 1.183562-7.089415V-1.099875C1.183562-.514072 1.135741-.418431 .526027-.418431C.406476-.418431 .191283-.418431 .191283-.215193C.191283 0 .382565 0 .597758 0H4.040847C6.133001 0 8.261021-1.303113 8.261021-4.244085C8.261021-7.10137 5.989539-8.18929 4.052802-8.18929H.597758ZM5.511333-7.531756C7.220922-6.981818 7.84259-5.66675 7.84259-4.244085C7.84259-2.211706 6.742715-1.111831 5.559153-.6934C6.336239-1.506351 6.575342-2.833375 6.575342-4.220174C6.575342-5.941719 6.109091-6.886177 5.499377-7.531756H5.511333ZM1.506351-.418431C1.601993-.633624 1.601993-.920548 1.601993-1.075965V-7.113325C1.601993-7.268742 1.601993-7.555666 1.506351-7.770859H2.86924C2.713823-7.591532 2.713823-7.328518 2.713823-7.161146V-1.028144C2.713823-.848817 2.713823-.609714 2.86924-.418431H1.506351ZM3.132254-7.12528C3.132254-7.388294 3.132254-7.49589 3.347447-7.627397C3.455044-7.711083 3.670237-7.770859 3.921295-7.770859C4.925529-7.770859 6.156912-6.886177 6.156912-4.220174C6.156912-2.701868 5.846077-.418431 3.837609-.418431C3.132254-.418431 3.132254-.836862 3.132254-1.06401V-7.12528Z'/>
+<path id='g8-98' d='M3.311582-8.18929L6.563387-6.718804L6.706849-6.981818L3.323537-8.894645L-.059776-6.981818L.071731-6.718804L3.311582-8.18929Z'/>
+</defs>
+<g id='page8'>
+<g stroke-miterlimit='10' transform='translate(55.465588,0)scale(0.996264,-0.996264)'>
+<g fill='#000' stroke='#000'>
+<g stroke-width='0.4'>
+<g transform='translate(-55.67358,-38.28313)'>
+<g stroke='none' transform='scale(-1.00375,1.00375)translate(55.465588,0)scale(-1,-1)'>
+<g stroke='#000' stroke-miterlimit='10' transform='translate(68.852217,-64.5575)scale(0.996264,-0.996264)'>
+<g transform='translate(-7.65283,0.0)'>
+<g stroke='none' transform='scale(-1.00375,1.00375)translate(68.852217,-64.5575)scale(-1,-1)'>
+<g fill='#000'>
+<g stroke='none'>
+<use x='69.848481' y='-67.645925' xlink:href='#g8-98'/>
+<use x='68.852217' y='-64.5575' xlink:href='#g6-67'/>
+<use x='77.486529' y='-68.895937' xlink:href='#g16-6'/>
+</g>
+</g>
+</g>
+</g>
+</g>
+<g stroke='#000' stroke-miterlimit='10' transform='translate(110.931176,-64.5575)scale(0.996264,-0.996264)'/>
+<g stroke='#000' stroke-miterlimit='10' transform='translate(153.010135,-64.5575)scale(0.996264,-0.996264)'>
+<g transform='translate(-7.65283,0.0)'>
+<g stroke='none' transform='scale(-1.00375,1.00375)translate(153.010135,-64.5575)scale(-1,-1)'>
+<g fill='#000'>
+<g stroke='none'>
+<use x='154.006399' y='-67.645925' xlink:href='#g8-98'/>
+<use x='153.010135' y='-64.5575' xlink:href='#g6-68'/>
+<use x='161.644447' y='-68.895937' xlink:href='#g16-6'/>
+</g>
+</g>
+</g>
+</g>
+</g>
+<g stroke='#000' stroke-miterlimit='10' transform='translate(68.852217,-38.140101)scale(0.996264,-0.996264)'/>
+<g stroke='#000' stroke-miterlimit='10' transform='translate(68.852217,0)scale(0.996264,-0.996264)'>
+<g transform='translate(-4.33334,0.0)'>
+<g stroke='none' transform='scale(-1.00375,1.00375)translate(68.852217,0)scale(-1,-1)'>
+<g fill='#000'>
+<g stroke='none'>
+<use x='69.848481' y='-3.088425' xlink:href='#g8-98'/>
+<use x='68.852217' y='0' xlink:href='#g6-67'/>
+</g>
+</g>
+</g>
+</g>
+</g>
+<g stroke='#000' stroke-miterlimit='10' transform='translate(110.931176,0)scale(0.996264,-0.996264)'/>
+<g stroke='#000' stroke-miterlimit='10' transform='translate(153.010135,0)scale(0.996264,-0.996264)'>
+<g transform='translate(-4.33334,0.0)'>
+<g stroke='none' transform='scale(-1.00375,1.00375)translate(153.010135,0)scale(-1,-1)'>
+<g fill='#000'>
+<g stroke='none'>
+<use x='154.006399' y='-3.088425' xlink:href='#g8-98'/>
+<use x='153.010135' y='0' xlink:href='#g6-68'/>
+</g>
+</g>
+</g>
+</g>
+</g>
+</g>
+</g>
+<g stroke-width='0.47998'>
+<path d='M-28.59993 29.51646H28.11995' fill='none'/>
+<g transform='translate(28.35994,29.51646)'>
+<g stroke-dasharray='none' stroke-dashoffset='0.0'>
+ <g stroke-linecap='round'>
+ <g stroke-linejoin='round'>
+ <path d='M-2.4959 2.87987C-2.0399 1.15193-1.02377 .33598 0 0C-1.02377-.33598-2.0399-1.15193-2.4959-2.87987' fill='none'/>
+ </g>
+ </g>
+ </g>
+</g>
+<g transform='translate(-3.0243,34.204)'>
+<g stroke='none' transform='scale(-1.00375,1.00375)translate(55.465588,0)scale(-1,-1)'>
+<g fill='#000'>
+<g stroke='none'>
+<use x='55.465588' y='0' xlink:href='#g13-106'/>
+<use x='58.890276' y='1.405846' xlink:href='#g15-33'/>
+</g>
+</g>
+</g>
+</g>
+</g>
+<g stroke-width='0.47998'>
+<path d='M-42.23676-21.40004V20.92006' fill='none'/>
+<g transform='matrix(0.0,1.0,-1.0,0.0,-42.23676,21.16005)'>
+<g stroke-dasharray='none' stroke-dashoffset='0.0'>
+ <g stroke-linecap='round'>
+ <g stroke-linejoin='round'>
+ <path d='M-2.4959 2.87987C-2.0399 1.15193-1.02377 .33598 0 0C-1.02377-.33598-2.0399-1.15193-2.4959-2.87987' fill='none'/>
+ </g>
+ </g>
+ </g>
+</g>
+<g transform='translate(-52.45218,-2.73332)'>
+<g stroke='none' transform='scale(-1.00375,1.00375)translate(55.465588,0)scale(-1,-1)'>
+<g fill='#000'>
+<g stroke='none'>
+<use x='55.465588' y='0' xlink:href='#g16-1'/>
+</g>
+</g>
+</g>
+</g>
+</g>
+<g stroke-width='0.47998'>
+<path d='M-31.91942-35.28313H31.43944' fill='none'/>
+<g transform='translate(31.67943,-35.28313)'>
+<g stroke-dasharray='none' stroke-dashoffset='0.0'>
+ <g stroke-linecap='round'>
+ <g stroke-linejoin='round'>
+ <path d='M-2.4959 2.87987C-2.0399 1.15193-1.02377 .33598 0 0C-1.02377-.33598-2.0399-1.15193-2.4959-2.87987' fill='none'/>
+ </g>
+ </g>
+ </g>
+</g>
+<g transform='translate(-3.0243,-43.70381)'>
+<g stroke='none' transform='scale(-1.00375,1.00375)translate(55.465588,0)scale(-1,-1)'>
+<g fill='#000'>
+<g stroke='none'>
+<use x='55.465588' y='0' xlink:href='#g13-106'/>
+<use x='58.890276' y='1.405846' xlink:href='#g15-33'/>
+</g>
+</g>
+</g>
+</g>
+</g>
+<g stroke-width='0.47998'>
+<path d='M42.23676-21.40004V20.92006' fill='none'/>
+<g transform='matrix(0.0,1.0,-1.0,0.0,42.23676,21.16005)'>
+<g stroke-dasharray='none' stroke-dashoffset='0.0'>
+ <g stroke-linecap='round'>
+ <g stroke-linejoin='round'>
+ <path d='M-2.4959 2.87987C-2.0399 1.15193-1.02377 .33598 0 0C-1.02377-.33598-2.0399-1.15193-2.4959-2.87987' fill='none'/>
+ </g>
+ </g>
+ </g>
+</g>
+<g transform='translate(45.36874,-2.73332)'>
+<g stroke='none' transform='scale(-1.00375,1.00375)translate(55.465588,0)scale(-1,-1)'>
+<g fill='#000'>
+<g stroke='none'>
+<use x='55.465588' y='0' xlink:href='#g16-1'/>
+</g>
+</g>
+</g>
+</g>
+</g>
+</g>
+</g>
+</g>
+</g>
+</svg></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+</div>
+<div id="Thmdefn14" class="ltx_theorem ltx_theorem_prop">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Proposition 3.14</span></span><span class="ltx_text ltx_font_bold">.</span>
+</h6>
+<div id="Thmdefn14.p1" class="ltx_para">
+<p class="ltx_p"><math id="Thmdefn14.p1.m1" class="ltx_Math" alttext="j_{!}(\mathsf{TCof}_{\widehat{\mathbb{C}}^{\Sigma}})\subseteq\mathsf{TCof}_{%
+\widehat{\mathbb{D}}^{\Sigma}}" display="inline"><mrow><mrow><msub><mi>j</mi><mo>!</mo></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>𝖳𝖢𝗈𝖿</mi><msup><mover accent="true"><mi>ℂ</mi><mo>^</mo></mover><mi mathvariant="normal">Σ</mi></msup></msub><mo stretchy="false">)</mo></mrow></mrow><mo>⊆</mo><msub><mi>𝖳𝖢𝗈𝖿</mi><msup><mover accent="true"><mi>𝔻</mi><mo>^</mo></mover><mi mathvariant="normal">Σ</mi></msup></msub></mrow></math>, and consequently, <math id="Thmdefn14.p1.m2" class="ltx_Math" alttext="j_{!}(\mathsf{TCof}_{\widehat{\mathbb{C}}})\subseteq\mathsf{TCof}_{\widehat{%
+\mathbb{D}}}" display="inline"><mrow><mrow><msub><mi>j</mi><mo>!</mo></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>𝖳𝖢𝗈𝖿</mi><mover accent="true"><mi>ℂ</mi><mo>^</mo></mover></msub><mo stretchy="false">)</mo></mrow></mrow><mo>⊆</mo><msub><mi>𝖳𝖢𝗈𝖿</mi><mover accent="true"><mi>𝔻</mi><mo>^</mo></mover></msub></mrow></math>. (because <math id="Thmdefn14.p1.m3" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> equivariant fibration iff <math id="Thmdefn14.p1.m4" class="ltx_Math" alttext="\Delta f" display="inline"><mrow><mi mathvariant="normal">Δ</mi><mo>⁢</mo><mi>f</mi></mrow></math> fibration in cubical species)</p>
+</div>
+</div>
+<div id="Thmdefn15" class="ltx_theorem ltx_theorem_prop">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Proposition 3.15</span></span><span class="ltx_text ltx_font_bold">.</span>
+</h6>
+<div id="Thmdefn15.p1" class="ltx_para">
+<p class="ltx_p"><math id="Thmdefn15.p1.m1" class="ltx_Math" alttext="j^{*}:\widehat{\mathbb{D}}_{\mathsf{eqv}}\rightarrow\widehat{\mathbb{C}}_{%
+\mathsf{eqv}}" display="inline"><mrow><msup><mi>j</mi><mo>∗</mo></msup><mo lspace="0.278em" rspace="0.278em">:</mo><mrow><msub><mover accent="true"><mi>𝔻</mi><mo>^</mo></mover><mi>𝖾𝗊𝗏</mi></msub><mo stretchy="false">→</mo><msub><mover accent="true"><mi>ℂ</mi><mo>^</mo></mover><mi>𝖾𝗊𝗏</mi></msub></mrow></mrow></math> is right Quillen.</p>
+</div>
+</div>
+</section>
+</section>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_align_center">
+<a href="S2.html" title="" class="ltx_ref" rel="prev"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">2 </span>Weak Orthogonality</span></a><a href="bib.html" title="" class="ltx_ref" rel="bibliography"><span class="ltx_text ltx_ref_title">References</span></a><a href="S4.html" title="" class="ltx_ref" rel="next"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">4 </span>Local Model Structure</span></a>
+</div>
+</footer>
+{% endraw %}

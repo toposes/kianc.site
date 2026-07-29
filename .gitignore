@@ -3,3 +3,4 @@ _build/
 .jekyll-metadata
 .sass-cache/
 vendor/
+.DS_Store

@@ -1,0 +1,314 @@
+/* Overrides for LaTeXML output rendered inside the site's default layout.
+   Loaded after LaTeXML.css, ltx-article.css and the site's styles.css, so it
+   wins over all three. Everything is scoped under .content-paper: these sheets
+   are only pulled in on paper pages, but scoping keeps them from leaking if
+   that ever changes.
+
+   The content column stays at the site's 640px. Anything intrinsically wider
+   than that — display equations, tikz-cd diagrams, tables — scrolls inside its
+   own box rather than widening the page. */
+
+/* The paper's preamble uses \usepackage{charter}. Charter ships with macOS but
+   not with Windows or most Linux systems, where the paper would silently fall
+   back to Georgia while the math stayed Charter — text and math in two
+   different designs. So XCharter (the extended Charter that TeX ships, same
+   design) is served with the site and everyone gets the same page. */
+@font-face {
+  font-family: "XCharter";
+  src: url("/assets/fonts/XCharter-Roman.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "XCharter";
+  src: url("/assets/fonts/XCharter-Italic.otf") format("opentype");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "XCharter";
+  src: url("/assets/fonts/XCharter-Bold.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "XCharter";
+  src: url("/assets/fonts/XCharter-BoldItalic.otf") format("opentype");
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* The site body is Ubuntu, which would otherwise cascade in and make the paper
+   read as UI text. */
+.content-paper {
+  font-family: "XCharter", Charter, "Bitstream Charter", Georgia,
+               "Times New Roman", Times, serif;
+  font-size: 16px;
+  line-height: 1.55;
+  font-weight: 400;
+  color: #444;
+}
+
+/* MathML needs a font carrying an OpenType MATH table: without one the browser
+   falls back to a text face, which has no double-struck glyphs (so \mathbb is
+   substituted from wherever) and cannot stretch \widehat over an expression.
+
+   XCharter Math is the math companion to XCharter, the extended Charter the
+   paper's text is set in, so the math shares the text's design instead of
+   sitting in a different face beside it. Shipped with the site rather than
+   assumed present — almost no machine has a math font installed. */
+@font-face {
+  font-family: "XCharter Math";
+  src: url("/assets/fonts/XCharter-Math.otf") format("opentype");
+  font-display: swap;
+}
+
+/* The paper loads eucal, so \mathcal is Euler Script in the PDF. Beyond
+   matching, this fixes a real inconsistency: Unicode has no script M in the
+   Mathematical Alphanumeric block (U+1D4A8 is unassigned), so script M must be
+   the Letterlike ℳ at U+2133 — and XCharter Math draws that codepoint to a
+   different design than its 1D49C-range script letters, leaving ℳ visibly odd
+   next to 𝒞 and 𝒩. Euler Script draws the whole alphabet consistently.
+
+   The range is confined to the script letters: the Letterlike block also holds
+   ℂ, ℍ and ℕ, which must keep coming from XCharter Math with the rest of the
+   double-struck. */
+@font-face {
+  font-family: "Euler Script";
+  src: url("/assets/fonts/Euler-Math.otf") format("opentype");
+  font-display: swap;
+  unicode-range: U+1D49C-1D4CF, U+210A-210B, U+2110, U+2112, U+211B,
+                 U+212C, U+212F-2131, U+2133-2134;
+}
+
+.content-paper math {
+  font-family: "Euler Script", "XCharter Math", Charter,
+               "Bitstream Charter", Georgia, serif;
+}
+
+/* LaTeXML.css pins calligraphic letters to "Lucida Calligraphy"/"Zapf
+   Chancery" on the <mi> itself, which overrides the family set on <math>.
+   Those are text faces with no Mathematical Alphanumeric coverage, so each
+   letter falls back to whatever font on the reader's machine happens to carry
+   its codepoint — which is why ℳ (Letterlike U+2133) ends up in a different
+   face from 𝒞 (U+1D49E) and looks out of place. Point them at the same stack
+   as the rest of the math. */
+.content-paper .ltx_font_mathcaligraphic,
+.content-paper .ltx_mathvariant_script,
+.content-paper .ltx_font_mathscript {
+  font-family: "Euler Script", "XCharter Math", serif;
+}
+
+/* Tags, captions and the nav stay in the site's UI face so the paper reads as
+   part of the site rather than a PDF dropped into it. */
+.content-paper .ltx_page_header,
+.content-paper .ltx_page_footer {
+  font-family: Ubuntu, sans-serif;
+}
+
+/* LaTeXML sets its own page frame; inside the layout the .content pane is
+   already the frame, so flatten it. */
+.content-paper .ltx_page_main,
+.content-paper .ltx_page_content,
+.content-paper .ltx_document {
+  display: block;
+  width: auto;
+  max-width: none;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background: none;
+}
+
+/* ---- headings ---- */
+
+/* XCharter ships 400 and 700 only. CSS resolves a requested 500 downwards to
+   400, so headings would come out unbold; 600 resolves upwards to 700. */
+.content-paper .ltx_title {
+  color: #444;
+  font-weight: 600;
+}
+
+.content-paper .ltx_title_section {
+  margin-top: 0;
+}
+
+/* ---- prev / next navigation LaTeXML puts above and below each section ---- */
+
+.content-paper .ltx_page_header,
+.content-paper .ltx_page_footer {
+  font-size: 13px;
+}
+
+.content-paper .ltx_page_header .ltx_align_center,
+.content-paper .ltx_page_footer .ltx_align_center {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  justify-content: space-between;
+  text-align: left;
+}
+
+.content-paper .ltx_page_header {
+  padding-bottom: 12px;
+  border-bottom: 1px solid #ffce1b;
+  margin-bottom: 28px;
+}
+
+.content-paper .ltx_page_footer {
+  padding-top: 12px;
+  border-top: 1px solid #ffce1b;
+  margin-top: 40px;
+}
+
+/* ---- spacing and indentation ----
+
+   The paper sets \parindent to 0 and separates blocks with a blank line and a
+   \medskip, so the web version does the same: nothing is indented, and every
+   block is parted from the next by one medskip. \medskip is 6pt, which is
+   0.5em against this 12pt (16px) body. */
+
+/* A strict \medskip is 6pt (0.5em here), but at this line height that reads as
+   cramped on screen, so the web version opens it up slightly. */
+.content-paper {
+  --paper-medskip: 0.8em;
+}
+
+/* ltx-article.css indents the first paragraph of each block by 2em, and there
+   are several selectors doing it; override the lot. */
+.content-paper .ltx_p,
+.content-paper .ltx_para > .ltx_p:first-child,
+.content-paper .ltx_title_abstract + .ltx_p,
+.content-paper section.ltx_pruned_first > .ltx_title + .ltx_para > .ltx_p,
+.content-paper section.ltx_indent_first > .ltx_title + .ltx_para > .ltx_p,
+.content-paper .ltx_indent > .ltx_p:first-child {
+  text-indent: 0;
+}
+
+.content-paper .ltx_para,
+.content-paper .ltx_p,
+.content-paper .ltx_theorem,
+.content-paper .ltx_proof,
+.content-paper .ltx_itemize,
+.content-paper .ltx_enumerate,
+.content-paper table.ltx_eqn_table {
+  margin-top: 0;
+  margin-bottom: var(--paper-medskip);
+}
+
+/* Theorems, definitions and the rest read as ordinary running text — no rule,
+   no inset, nothing that reads as a block quote. */
+.content-paper .ltx_theorem {
+  padding: 0;
+  border: none;
+  background: none;
+}
+
+.content-paper .ltx_theorem .ltx_title {
+  font-weight: 600;
+}
+
+/* Lists keep only the hanging indent their markers need: LaTeXML pulls the
+   marker 1.5em left of the text, so 1.5em of padding lands it on the margin.
+
+   The top margin is set explicitly rather than left to collapse with the
+   preceding paragraph's: LaTeXML's own list rules eat most of that margin, so
+   the list would otherwise butt up against the paragraph introducing it. */
+.content-paper .ltx_itemize,
+.content-paper .ltx_enumerate {
+  margin-left: 0;
+  margin-top: var(--paper-medskip);
+  padding-left: 1.5em;
+}
+
+/* The margin that separates one item from the next also sits below the final
+   item, inside the list, where it stacks with the list's own margin-bottom and
+   makes the space after a list visibly larger than the space before it. Drop it
+   on the last item only, so inter-item spacing is untouched. */
+.content-paper .ltx_item:last-child > .ltx_para {
+  margin-bottom: 0;
+}
+
+/* ---- oversized content scrolls in place instead of widening the column ---- */
+
+/* Only ever the <table>, never the rows: LaTeXML puts ltx_equation on <tr> too,
+   and `display: block` on a table row collapses the layout that holds the
+   diagrams. The scroll box goes on a wrapper, so the table itself keeps
+   `display: table`. */
+.content-paper table.ltx_eqn_table,
+.content-paper table.ltx_tabular,
+.content-paper .ltx_figure {
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+/* LaTeXML centres a display equation with two padding cells of width:50%,
+   which squeezes the content cell holding the diagram down to its min-width.
+   A max-width on the diagram then resolves against that sliver and collapses
+   it to nothing. Shrink the padding cells to almost zero and let text-align
+   do the centring, so the content cell gets the full column width. */
+.content-paper td.ltx_eqn_center_padleft,
+.content-paper td.ltx_eqn_center_padright {
+  width: 1%;
+  min-width: 0;
+  padding: 0;
+}
+
+/* tikz-cd diagrams, rendered by real LaTeX via dvisvgm. They carry a viewBox,
+   so anything wider than the column scales down to fit; narrower diagrams are
+   untouched, since max-width only binds when it would overflow. */
+.content-paper svg.ltx_picture {
+  max-width: 100%;
+  height: auto;
+}
+
+/* A diagram is an inline element by default, so it sits on the text baseline:
+   the line box grows to fit it, adding leading above and descender space
+   below. That reads as a large unexplained gap before the diagram. As a block
+   it occupies exactly its own height, and the margins below set the spacing. */
+.content-paper td.ltx_eqn_cell svg.ltx_picture {
+  display: block;
+  margin: 0 auto;
+}
+
+/* tikz-cd masks the arrow behind a label placed on it. render-diagrams.py
+   strips the hard-coded white and tags those nodes, so the mask is painted the
+   page background here — keep this in step with body's background in
+   styles.css. Transparent is not an option: the arrow would run through the
+   label and make it unreadable. */
+.content-paper svg.ltx_picture .ltx-label-backdrop {
+  fill: #fcf4a3;
+}
+
+.content-paper math {
+  font-size: 1em;
+}
+
+/* styles.css sets `table { width: 100% }`, which stretches equation tables and
+   throws off the centring of display math. */
+.content-paper table.ltx_eqn_table {
+  width: auto;
+  min-width: 100%;
+}
+
+/* styles.css puts a rule under every td; equation cells must not have one, and
+   its 5px/10px padding would add to the block's own spacing. */
+.content-paper .ltx_eqn_table td,
+.content-paper .ltx_eqn_table th {
+  border-bottom: none;
+  padding: 0;
+}
+
+/* Display material is set off by one medskip on each side, matching the space
+   between paragraphs rather than towering over it. */
+.content-paper table.ltx_eqn_table {
+  margin-top: var(--paper-medskip);
+  margin-bottom: var(--paper-medskip);
+}

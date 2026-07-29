@@ -12,13 +12,20 @@
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-    <meta property="og:url" content="http://kianc.site">
+    <meta property="og:url" content="https://kianc.site">
     <meta property="og:type" content="website">
     <meta property="og:title" content="{{ site.title }}">
     <meta property="og:description" content="{{ bio | strip_newlines | strip }}">
-    <meta property="og:image" content="http://kianc.site/assets/portrait.png">
+    <meta property="og:image" content="https://kianc.site/assets/portrait.png">
 
     <link rel="stylesheet" href="{{ '/assets/styles.css' | relative_url }}">
+    {%- comment -%}
+      Page-scoped stylesheets, e.g. the LaTeXML sheets a generated paper page
+      needs. Loaded last so they can override the site styles.
+    {%- endcomment -%}
+    {%- for stylesheet in page.extra_css %}
+    <link rel="stylesheet" href="{{ stylesheet | relative_url }}">
+    {%- endfor %}
     <title>{{ page.title }}</title>
   </head>
 
@@ -44,7 +51,7 @@
       </header>
     </aside>
 
-    <main id="swup" class="content">
+    <main id="swup" class="content{% if page.paper_page %} content-paper{% endif %}">
       {{ content }}
     </main>
     </div>
