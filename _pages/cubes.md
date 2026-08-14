@@ -1,12 +1,12 @@
 ---
 layout: default
 permalink: /cubes/
-title: cartesian & dedekind cubes | kianc.site
+title: Cubes | kianc.site
 ---
 
 ## Cartesian and Dedekind cubes
 
-A work in progress on weak orthogonality and the local model structure on cubical presheaves.
+wip on the local model structure on cubical presheaves.
 
 [Read the PDF](/papers/cart-ded/main.pdf)
 
