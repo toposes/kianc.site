@@ -12,7 +12,7 @@ I am a graduate student studying math. I like the interplay between category the
 
 ## Education
 
-- PhD in mathematics, Carnegie Mellon University (2019-current)
+- PhD in mathematics, Carnegie Mellon University (2019-2024, 2025-current)
 - BS in mathematics, Rutgers University&ndash;New Brunswick (2015-2019)
 
 <hr>
